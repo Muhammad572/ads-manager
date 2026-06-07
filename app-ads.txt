@@ -1,0 +1,2 @@
+google.com, pub-8653293678103388, DIRECT, f08c47fec0942fa0
+unityads.com, 497077, DIRECT, 96cabb8fbdde37a7
