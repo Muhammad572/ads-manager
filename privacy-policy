@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy | HasTech</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#f5f7fb;
+color:#333;
+line-height:1.8;
+}
+
+header{
+background:#1565C0;
+padding:60px 20px;
+text-align:center;
+color:white;
+}
+
+header h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+header p{
+font-size:18px;
+opacity:.9;
+}
+
+.container{
+max-width:1100px;
+margin:40px auto;
+background:white;
+padding:40px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+h2{
+margin-top:35px;
+margin-bottom:12px;
+color:#1565C0;
+}
+
+ul{
+margin-left:20px;
+}
+
+footer{
+margin-top:40px;
+padding:30px;
+text-align:center;
+background:#1565C0;
+color:white;
+}
+
+a{
+color:#1565C0;
+text-decoration:none;
+}
+
+@media(max-width:768px){
+
+header h1{
+font-size:30px;
+}
+
+.container{
+padding:25px;
+margin:20px;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Privacy Policy</h1>
+
+<p>Last Updated: July 21, 2026</p>
+
+</header>
+
+<div class="container">
+
+<p>
+HasTech ("we", "our", or "us") values your privacy. This Privacy Policy explains how our
+applications, websites, and TV applications collect, use, and protect your information.
+By using our products or services, you agree to this Privacy Policy.
+</p>
+
+<h2>Information We Collect</h2>
+
+<p>Depending on the application, we may collect:</p>
+
+<ul>
+
+<li>Device information</li>
+
+<li>Operating system version</li>
+
+<li>Application version</li>
+
+<li>Anonymous usage statistics</li>
+
+<li>Crash reports</li>
+
+<li>Advertising identifiers (where applicable)</li>
+
+</ul>
+
+<p>
+We do not intentionally collect personally identifiable information unless you voluntarily provide it.
+</p>
+
+<h2>Advertising</h2>
+
+<p>
+Some of our applications may display advertisements through third-party advertising providers such as Google AdMob or other advertising partners.
+These providers may use advertising identifiers to deliver relevant advertisements.
+</p>
+
+<h2>Analytics</h2>
+
+<p>
+Some apps may use analytics services to improve performance, stability, and user experience.
+Collected analytics are anonymous and cannot directly identify individual users.
+</p>
+
+<h2>Children's Privacy</h2>
+
+<p>
+Many of our applications are designed for general audiences.
+We do not knowingly collect personal information from children.
+If you believe that a child has provided personal information, please contact us and we will promptly remove such information if applicable.
+</p>
+
+<h2>Third-Party Services</h2>
+
+<p>
+Our applications may integrate trusted third-party services that have their own privacy policies.
+Please review those services separately if applicable.
+</p>
+
+<h2>Data Security</h2>
+
+<p>
+We take reasonable measures to protect your information against unauthorized access, disclosure, or misuse.
+However, no internet transmission or storage method is completely secure.
+</p>
+
+<h2>Your Rights</h2>
+
+<p>
+Depending on your location, you may have rights regarding access, correction, deletion, or restriction of your information.
+You may contact us regarding any privacy-related requests.
+</p>
+
+<h2>Changes to this Privacy Policy</h2>
+
+<p>
+We may update this Privacy Policy from time to time.
+Changes become effective immediately after publication on this page.
+</p>
+
+<h2>Contact Us</h2>
+
+<p>
+
+If you have any questions regarding this Privacy Policy, please contact us:
+
+</p>
+
+<p>
+
+<strong>Developer:</strong> HasTech
+
+<br>
+
+<strong>Email:</strong>
+
+<a href="mailto:support@hastech.online">support@hastech.online</a>
+
+<br>
+
+<strong>Website:</strong>
+
+<a href="https://hastech.online">https://hastech.online</a>
+
+</p>
+
+</div>
+
+<footer>
+
+© 2026 HasTech. All Rights Reserved.
+
+</footer>
+
+</body>
+</html>
