@@ -9,67 +9,43 @@
   ],
   "assets": [
     {
-      "id": "flower-paradise-relax-tv",
+      "id": "smart-iptv-test-content",
       "type": "shortform",
       "titles": [
         {
-          "value": "Flower Paradise: Relax TV",
-          "languages": [
-            "en"
-          ]
+          "value": "Smart IPTV",
+          "languages": ["en"]
         }
       ],
       "shortDescriptions": [
         {
-          "value": "Beautiful flower landscapes with relaxing background music in HD and 4K.",
-          "languages": [
-            "en"
-          ]
+          "value": "Smart IPTV test content for Roku Search.",
+          "languages": ["en"]
         }
       ],
+      "releaseYear": 2026,
+      "releaseDate": "2026-01-01",
+      "genres": ["other"],
+      "advisoryRatings": [
+        {
+          "source": "USA_PR",
+          "value": "TVG"
+        }
+      ],
+      "images": [
+        {
+          "type": "main",
+          "url": "https://hastech.online/roku/smart-iptv-search.png",
+          "languages": ["en"]
+        }
+      ],
+      "durationInSeconds": 60,
       "content": {
         "playOptions": [
           {
             "license": "free",
-            "quality": "uhd",
-            "playId": "flower_paradise",
-            "availabilityInfo": {
-              "country": [
-                "us",
-                "ca",
-                "gb",
-                "au"
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "id": "sleep-music-nature-tv",
-      "type": "shortform",
-      "titles": [
-        {
-          "value": "Sleep Music & Nature TV",
-          "languages": [
-            "en"
-          ]
-        }
-      ],
-      "shortDescriptions": [
-        {
-          "value": "Peaceful nature scenes, calming sleep sounds, and ambient music for relaxation.",
-          "languages": [
-            "en"
-          ]
-        }
-      ],
-      "content": {
-        "playOptions": [
-          {
-            "license": "free",
-            "quality": "uhd",
-            "playId": "sleep_music_nature",
+            "quality": "hd",
+            "playId": "smart-iptv-test-content",
             "availabilityInfo": {
               "country": [
                 "us",
