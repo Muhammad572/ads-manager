@@ -25,7 +25,9 @@
       ],
       "releaseYear": 2026,
       "releaseDate": "2026-01-01",
-      "genres": ["other"],
+      "genres": [
+        "entertainment"
+      ],
       "advisoryRatings": [
         {
           "source": "USA_PR",
