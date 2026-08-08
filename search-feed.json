@@ -1,0 +1,86 @@
+{
+  "version": "1",
+  "defaultLanguage": "en",
+  "defaultAvailabilityCountries": [
+    "us",
+    "ca",
+    "gb",
+    "au"
+  ],
+  "assets": [
+    {
+      "id": "flower-paradise-relax-tv",
+      "type": "shortform",
+      "titles": [
+        {
+          "value": "Flower Paradise: Relax TV",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "shortDescriptions": [
+        {
+          "value": "Beautiful flower landscapes with relaxing background music in HD and 4K.",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "content": {
+        "playOptions": [
+          {
+            "license": "free",
+            "quality": "uhd",
+            "playId": "flower_paradise",
+            "availabilityInfo": {
+              "country": [
+                "us",
+                "ca",
+                "gb",
+                "au"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "sleep-music-nature-tv",
+      "type": "shortform",
+      "titles": [
+        {
+          "value": "Sleep Music & Nature TV",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "shortDescriptions": [
+        {
+          "value": "Peaceful nature scenes, calming sleep sounds, and ambient music for relaxation.",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "content": {
+        "playOptions": [
+          {
+            "license": "free",
+            "quality": "uhd",
+            "playId": "sleep_music_nature",
+            "availabilityInfo": {
+              "country": [
+                "us",
+                "ca",
+                "gb",
+                "au"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
