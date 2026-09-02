@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "app": "Daily Fitness TV",
+  "assetVersion": "v1",
+  "baseUrl": "https://hastech.online/daily-fitness-tv/",
+  "images": {
+    "path": "v1/images/",
+    "ext": ".jpg",
+    "keys": ["home_background", "onboarding_1", "onboarding_2", "onboarding_3"]
+  },
+  "placeholder": "https://hastech.online/daily-fitness-tv/placeholder.png",
+  "note": "Decorative full-screen backgrounds for the Daily Fitness TV Roku channel. Loaded at runtime so they are not bundled in the <=4MB Roku package. Dailymotion video/playlist assets are NOT hosted here. To refresh art without a Roku rebuild: overwrite the files in v1/images/ (same names) and push; or add v2/ and bump the app's REMOTE_ASSET_VERSION constant.",
+  "generated": "2026-08-30"
+}
