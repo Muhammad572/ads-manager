@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drive Sign-In Relay &middot; tvOS Media Hub</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+  :root {
+    --bg: #0b0d12;
+    --surface: #161922;
+    --surface-border: #262b38;
+    --text: #f5f3ee;
+    --muted: #9aa0ad;
+    --accent: #ffb454;
+    --accent-soft: #3d2f18;
+    --danger: #ff8a80;
+    --danger-soft: #3a1f1d;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Work Sans', system-ui, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 20px;
+  }
+
+  .page {
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--muted);
+  }
+
+  .brand .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 12px 2px var(--accent);
+  }
+
+  .brand span {
+    font-family: 'Unbounded', system-ui, sans-serif;
+    font-weight: 500;
+    font-size: 0.78rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+  }
+
+  .card {
+    width: 100%;
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: 20px;
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    text-align: center;
+  }
+
+  h1 {
+    font-family: 'Unbounded', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 1.35;
+    margin: 0;
+    text-wrap: balance;
+    color: var(--text);
+  }
+
+  .code-shell {
+    width: 100%;
+    background: var(--accent-soft);
+    border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+    border-radius: 14px;
+    padding: 22px 16px;
+  }
+
+  .code {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    font-size: clamp(1.6rem, 7vw, 2.4rem);
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    word-break: break-all;
+    line-height: 1.3;
+  }
+
+  button.copy {
+    font-family: 'Work Sans', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--bg);
+    background: var(--accent);
+    border: none;
+    border-radius: 999px;
+    padding: 13px 28px;
+    cursor: pointer;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+  }
+
+  button.copy:hover { opacity: 0.92; }
+  button.copy:active { transform: scale(0.97); }
+  button.copy:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; }
+
+  button.copy.copied { background: #8fd9a8; }
+
+  ol.steps {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+  }
+
+  ol.steps li {
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+    color: var(--muted);
+    font-size: 0.92rem;
+    line-height: 1.5;
+  }
+
+  ol.steps .num {
+    flex: none;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 0.85rem;
+  }
+
+  ol.steps strong { color: var(--text); font-weight: 600; }
+
+  .error-box {
+    background: var(--danger-soft);
+    border: 1px solid color-mix(in srgb, var(--danger) 35%, transparent);
+    border-radius: 14px;
+    padding: 18px 16px;
+    color: var(--danger);
+    font-size: 0.92rem;
+    line-height: 1.5;
+  }
+
+  .idle-copy {
+    color: var(--muted);
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  footer {
+    color: var(--muted);
+    font-size: 0.78rem;
+    opacity: 0.75;
+  }
+
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="brand"><span class="dot"></span><span>tvOS Media Hub &middot; Sign-In Relay</span></div>
+
+  <div class="card">
+    <div id="codeView" hidden>
+      <h1 style="margin-bottom: 22px;">Enter this code on your Apple&nbsp;TV</h1>
+      <div class="code-shell"><div class="code" id="codeText"></div></div>
+      <div style="height: 18px;"></div>
+      <button class="copy" id="copyButton" type="button">Copy code</button>
+      <div style="height: 22px;"></div>
+      <ol class="steps">
+        <li><span class="num">1</span><span>Go back to <strong>tvOS Media Hub</strong> on your Apple TV.</span></li>
+        <li><span class="num">2</span><span>Paste or type the code above into the sign-in screen.</span></li>
+        <li><span class="num">3</span><span>Your TV finishes connecting automatically &mdash; this page has nothing more to do.</span></li>
+      </ol>
+    </div>
+
+    <div id="errorView" hidden>
+      <h1>Sign-in didn't complete</h1>
+      <div style="height: 16px;"></div>
+      <div class="error-box" id="errorText"></div>
+      <div style="height: 16px;"></div>
+      <p class="idle-copy">Go back to your Apple TV and try connecting Google Drive again.</p>
+    </div>
+
+    <div id="idleView" hidden>
+      <h1>Waiting for a sign-in code</h1>
+      <div style="height: 14px;"></div>
+      <p class="idle-copy">This page relays your Google Drive sign-in code back to tvOS Media Hub. Start the connection from the app on your Apple&nbsp;TV first &mdash; it will send you here with a code already attached.</p>
+    </div>
+  </div>
+
+  <footer>This page only displays a one-time code. It stores nothing and sends nothing anywhere.</footer>
+</div>
+
+<script>
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    var code = params.get('code');
+    var error = params.get('error');
+    var errorDescription = params.get('error_description');
+
+    function show(id) {
+      document.getElementById(id).hidden = false;
+    }
+
+    if (code) {
+      document.getElementById('codeText').textContent = code;
+      show('codeView');
+
+      var button = document.getElementById('copyButton');
+      button.addEventListener('click', function () {
+        navigator.clipboard.writeText(code).then(function () {
+          button.textContent = 'Copied';
+          button.classList.add('copied');
+          setTimeout(function () {
+            button.textContent = 'Copy code';
+            button.classList.remove('copied');
+          }, 1800);
+        });
+      });
+    } else if (error) {
+      document.getElementById('errorText').textContent = errorDescription || error;
+      show('errorView');
+    } else {
+      show('idleView');
+    }
+  })();
+</script>
+
+</body>
+</html>
