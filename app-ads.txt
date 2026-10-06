@@ -1,2 +1,3 @@
 google.com, pub-8653293678103388, DIRECT, f08c47fec0942fa0
 unityads.com, 497077, DIRECT, 96cabb8fbdde37a7
+facebook.com, 2247679522661537, DIRECT, c3e20eee3f780d68
